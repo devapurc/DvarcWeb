@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dvarc Launcher — Minecraft listo para jugar</title>
+    <meta
+      name="description"
+      content="Dvarc Launcher descarga versiones bloqueadas y verificadas de Minecraft con sus mods, resource packs y shaders. Elige, descarga y juega."
+    />
+    <meta name="theme-color" content="#0b0d10" />
+    <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+    <meta property="og:title" content="Dvarc Launcher" />
+    <meta property="og:description" content="Versiones de Minecraft listas, verificadas y con eventos para tu cuenta." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/logo-512.png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html" aria-label="Dvarc Launcher — inicio">
+          <img src="assets/img/logo.png" alt="" width="34" height="34" />
+          <span>Dvarc<small>Launcher</small></span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Abrir menú de navegación"
+        >
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Principal">
+          <a href="index.html">Inicio</a>
+          <a href="download.html">Descargar</a>
+          <a href="panel.html" class="nav-cta" data-auth="in">Mi panel</a>
+          <a href="login.html" class="nav-cta" data-auth="out">Iniciar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="pill" data-api-status>
+              <span class="pill-dot"></span>
+              <span data-api-status-text>Conectando con la API…</span>
+            </span>
+            <h1>Minecraft listo para jugar, <em>sin configurar nada</em>.</h1>
+            <p class="hero-lead">
+              Dvarc Launcher descarga versiones bloqueadas con sus mods, resource packs y shaders ya
+              armados. Tú eliges, el launcher verifica y tú juegas.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="download.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke-linecap="round" />
+                </svg>
+                Descargar launcher
+              </a>
+              <a class="btn btn-ghost" href="panel.html">Ver mis eventos</a>
+            </div>
+            <ul class="hero-meta">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="m5 12.5 4.5 4.5L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Windows, macOS y Linux
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M12 3 5 6v5c0 4.2 2.9 7.9 7 9 4.1-1.1 7-4.8 7-9V6l-7-3Z" stroke-linejoin="round" />
+                  <path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Integridad SHA-256
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <rect x="3.5" y="5" width="17" height="15" rx="2.5" />
+                  <path d="M8 3v4M16 3v4M3.5 10h17" stroke-linecap="round" />
+                </svg>
+                Eventos por cuenta
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-art" aria-hidden="true">
+            <div class="hero-ring"></div>
+            <img class="hero-logo" src="assets/img/logo.png" alt="" width="360" height="360" />
+            <span class="hero-tag tag-a">Versión verificada</span>
+            <span class="hero-tag tag-b">Token de instalación</span>
+            <span class="hero-tag tag-c">Eventos</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Por qué Dvarc</p>
+              <h2>Menos configuración. Más juego.</h2>
+            </div>
+            <p>
+              Todo lo que normalmente se rompe al instalar un modpack queda resuelto antes de que
+              abras Minecraft.
+            </p>
+          </div>
+
+          <div class="card-grid">
+            <article class="card">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z" stroke-linejoin="round" />
+                  <path d="M12 12 4 7.5M12 12l8-4.5M12 12v9" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Versiones bloqueadas</h3>
+              <p>
+                Cada pack llega con sus mods, resource packs y shaders. En el launcher no se pueden
+                editar por accidente: solo se eligen, se descargan y se juegan.
+              </p>
+            </article>
+
+            <article class="card card--green">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path d="M12 3 5 6v5c0 4.2 2.9 7.9 7 9 4.1-1.1 7-4.8 7-9V6l-7-3Z" stroke-linejoin="round" />
+                  <path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Integridad verificada</h3>
+              <p>
+                Un manifiesto SHA-256 revisa cada archivo al arrancar. Si algo falta o cambió, se
+                vuelve a descargar automáticamente.
+              </p>
+            </article>
+
+            <article class="card card--wine">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <rect x="3.5" y="5" width="17" height="15" rx="2.5" />
+                  <path d="M8 3v4M16 3v4M3.5 10h17" stroke-linecap="round" />
+                  <path d="m10 14 2 2 3-3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Eventos para tu cuenta</h3>
+              <p>
+                El token de tu instalación identifica tus cuentas. Inicia sesión en la web para ver
+                los eventos y versiones que el equipo habilitó para ti.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Cómo funciona</p>
+              <h2>Tres pasos y estás dentro.</h2>
+            </div>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <h3>Descarga el launcher</h3>
+              <p>Elige el instalador para tu sistema. La web siempre enlaza la última versión publicada.</p>
+            </li>
+            <li class="step">
+              <h3>Copia tu token</h3>
+              <p>Abre <strong>Ajustes → Dvarc</strong> en el launcher y copia el token de la instalación.</p>
+            </li>
+            <li class="step">
+              <h3>Inicia sesión y juega</h3>
+              <p>Pega el token aquí, revisa tus eventos y elige la versión. El launcher hace el resto.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta-band">
+            <div>
+              <h2>¿Listo para entrar?</h2>
+              <p>Descarga el launcher o abre tu panel con el token de la instalación.</p>
+            </div>
+            <div class="cta-actions">
+              <a class="btn btn-primary" href="download.html">Descargar</a>
+              <a class="btn" href="login.html">Iniciar sesión</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/img/logo.png" alt="" width="40" height="40" />
+            <div>
+              <strong>Dvarc Launcher</strong>
+              <p>Versiones de Minecraft preparadas, verificadas y con eventos para tu comunidad.</p>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Launcher</h2>
+              <a href="download.html">Descargar</a>
+              <a href="https://github.com/devapurc/DvarcLauncher" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+            <div>
+              <h2>Cuenta</h2>
+              <a href="login.html">Iniciar sesión</a>
+              <a href="panel.html">Eventos</a>
+            </div>
+            <div>
+              <h2>API</h2>
+              <a href="https://dvarc.api.apurc.online/docs" target="_blank" rel="noopener noreferrer">Documentación</a>
+              <a href="https://dvarc.api.apurc.online/api/v1/health" target="_blank" rel="noopener noreferrer">Estado</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="footer-year">2026</span> Dvarc</span>
+          <span>No afiliado a Mojang ni a Microsoft.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/api.js" defer></script>
+    <script src="assets/js/auth.js" defer></script>
+    <script src="assets/js/events.js" defer></script>
+    <script src="assets/js/download.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

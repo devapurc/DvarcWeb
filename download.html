@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descargar — Dvarc Launcher</title>
+    <meta
+      name="description"
+      content="Descarga la última versión de Dvarc Launcher para Windows, macOS o Linux."
+    />
+    <meta name="theme-color" content="#0b0d10" />
+    <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page="download">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html" aria-label="Dvarc Launcher — inicio">
+          <img src="assets/img/logo.png" alt="" width="34" height="34" />
+          <span>Dvarc<small>Launcher</small></span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Abrir menú de navegación"
+        >
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Principal">
+          <a href="index.html">Inicio</a>
+          <a href="download.html">Descargar</a>
+          <a href="panel.html" class="nav-cta" data-auth="in">Mi panel</a>
+          <a href="login.html" class="nav-cta" data-auth="out">Iniciar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="page-head">
+        <div class="container">
+          <p class="eyebrow">Descargas</p>
+          <h1>Lleva Dvarc a tu equipo.</h1>
+          <p class="hero-lead">
+            La web detecta tu sistema y enlaza el archivo correcto de la última release publicada en
+            GitHub. Los instaladores se actualizan solos desde el repositorio.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="os-tabs" id="os-tabs" role="tablist" aria-label="Sistema operativo"></div>
+          <p id="release-status" class="hint" role="status" aria-live="polite" style="margin-bottom: 1rem">
+            Buscando la última versión…
+          </p>
+
+          <div id="release-root" aria-live="polite">
+            <div class="skeleton" style="height: 230px" aria-hidden="true"></div>
+          </div>
+
+          <details class="assets" id="asset-details" hidden>
+            <summary>Ver todos los archivos de la release</summary>
+            <div>
+              <ul class="asset-list" id="asset-list"></ul>
+            </div>
+          </details>
+
+          <div class="note-grid">
+            <div class="note">
+              <h3>Requisitos</h3>
+              <p>
+                Windows 10/11, macOS 12 o superior, o una distribución de Linux de 64 bits. El
+                launcher puede descargar y administrar Java por ti.
+              </p>
+            </div>
+            <div class="note">
+              <h3>Tu token de instalación</h3>
+              <p>
+                Al abrir el launcher por primera vez se crea un token. Está en
+                <strong>Ajustes → Dvarc</strong>; cópialo para entrar a la web.
+              </p>
+            </div>
+            <div class="note">
+              <h3>Versiones bloqueadas</h3>
+              <p>
+                No necesitas instalar mods a mano. El launcher descarga el pack completo, verifica su
+                SHA-256 y lo deja listo para jugar.
+              </p>
+            </div>
+          </div>
+
+          <p class="hint" style="margin-top: 1.2rem">
+            Si GitHub limita la consulta o no hay releases, puedes revisar
+            <a href="https://github.com/devapurc/DvarcLauncher/releases" target="_blank" rel="noopener noreferrer"
+              >todas las releases del repositorio</a
+            >.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/img/logo.png" alt="" width="40" height="40" />
+            <div>
+              <strong>Dvarc Launcher</strong>
+              <p>Versiones de Minecraft preparadas, verificadas y con eventos para tu comunidad.</p>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Launcher</h2>
+              <a href="download.html">Descargar</a>
+              <a href="https://github.com/devapurc/DvarcLauncher" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+            <div>
+              <h2>Cuenta</h2>
+              <a href="login.html">Iniciar sesión</a>
+              <a href="panel.html">Eventos</a>
+            </div>
+            <div>
+              <h2>API</h2>
+              <a href="https://dvarc.api.apurc.online/docs" target="_blank" rel="noopener noreferrer">Documentación</a>
+              <a href="https://dvarc.api.apurc.online/api/v1/health" target="_blank" rel="noopener noreferrer">Estado</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="footer-year">2026</span> Dvarc</span>
+          <span>No afiliado a Mojang ni a Microsoft.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/api.js" defer></script>
+    <script src="assets/js/auth.js" defer></script>
+    <script src="assets/js/events.js" defer></script>
+    <script src="assets/js/download.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

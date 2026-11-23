@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi panel — Dvarc Launcher</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#0b0d10" />
+    <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      /* Evita mostrar el panel a quien no tiene token. */
+      (function () {
+        var token = "";
+        try {
+          token = localStorage.getItem("dvarc_token") || sessionStorage.getItem("dvarc_token") || "";
+        } catch (error) {
+          token = "";
+        }
+        if (!token) {
+          window.location.replace("login.html?next=panel.html");
+        }
+      })();
+    </script>
+  </head>
+  <body data-page="panel">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html" aria-label="Dvarc Launcher — inicio">
+          <img src="assets/img/logo.png" alt="" width="34" height="34" />
+          <span>Dvarc<small>Launcher</small></span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Abrir menú de navegación"
+        >
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Principal">
+          <a href="index.html">Inicio</a>
+          <a href="download.html">Descargar</a>
+          <a href="panel.html" class="nav-cta" data-auth="in">Mi panel</a>
+          <a href="login.html" class="nav-cta" data-auth="out">Iniciar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="dashboard">
+      <div class="container">
+        <div class="dash-head">
+          <div>
+            <p class="eyebrow">Tu panel</p>
+            <h1 id="welcome-title">Hola</h1>
+            <p>Estas son las versiones y los eventos disponibles para las cuentas de tu token.</p>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem">
+            <span class="user-chip" id="account-chip">
+              <span class="avatar" id="account-avatar" aria-hidden="true">DV</span>
+              <span id="account-name">Cargando…</span>
+            </span>
+            <button class="btn btn-sm btn-ghost" type="button" data-action="logout">Salir</button>
+          </div>
+        </div>
+
+        <div class="token-bar">
+          <div>
+            <p class="token-label">Token de esta instalación</p>
+            <code id="token-preview">—</code>
+            <p class="hint" style="margin-top: 0.3rem">
+              API: <span id="api-endpoint">—</span>
+              <span id="copy-status" class="text-accent" role="status" aria-live="polite" style="margin-left: 0.5rem"></span>
+            </p>
+          </div>
+          <div class="token-actions">
+            <button class="btn btn-sm" type="button" id="copy-token">Copiar token</button>
+            <a class="btn btn-sm btn-ghost" href="download.html">Ir al launcher</a>
+          </div>
+        </div>
+
+        <p class="hint" style="margin: -1.4rem 0 2.4rem">
+          ¿Falta una cuenta? Abre el launcher con esa cuenta iniciada y vuelve a cargar esta página.
+        </p>
+
+        <section class="panel-section" id="eventos" aria-labelledby="eventos-title">
+          <div class="section-head">
+            <h2 id="eventos-title">Eventos</h2>
+            <div class="filters" id="event-filters" role="group" aria-label="Filtrar eventos">
+              <button type="button" data-event-filter="upcoming" aria-pressed="true">Próximos</button>
+              <button type="button" data-event-filter="all" aria-pressed="false">Todos</button>
+            </div>
+          </div>
+          <div class="event-list" id="events-list" aria-live="polite" aria-busy="true">
+            <div class="skeleton skeleton-event" aria-hidden="true"></div>
+            <div class="skeleton skeleton-event" aria-hidden="true"></div>
+          </div>
+        </section>
+
+        <section class="panel-section" id="versiones" aria-labelledby="versiones-title">
+          <div class="section-head">
+            <h2 id="versiones-title">Versiones disponibles</h2>
+            <p class="hint">Se descargan y verifican desde el launcher.</p>
+          </div>
+          <div class="version-grid" id="versions-list" aria-live="polite" aria-busy="true">
+            <div class="skeleton skeleton-version" aria-hidden="true"></div>
+            <div class="skeleton skeleton-version" aria-hidden="true"></div>
+          </div>
+        </section>
+
+        <div class="note-grid">
+          <div class="note">
+            <h3>Eventos privados</h3>
+            <p>
+              Solo ves los eventos asignados a tus cuentas y los que son públicos para cualquier
+              token válido.
+            </p>
+          </div>
+          <div class="note">
+            <h3>Seguridad del token</h3>
+            <p>
+              El token identifica tu instalación. No lo publiques ni lo compartas; si crees que se
+              filtró, pide al equipo que lo revoque.
+            </p>
+          </div>
+          <div class="note">
+            <h3>Versiones bloqueadas</h3>
+            <p>
+              Los mods y packs de las versiones bloqueadas se administran desde el servidor. No hace
+              falta editar nada localmente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/img/logo.png" alt="" width="40" height="40" />
+            <div>
+              <strong>Dvarc Launcher</strong>
+              <p>Versiones de Minecraft preparadas, verificadas y con eventos para tu comunidad.</p>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Launcher</h2>
+              <a href="download.html">Descargar</a>
+              <a href="https://github.com/devapurc/DvarcLauncher" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+            <div>
+              <h2>Cuenta</h2>
+              <a href="login.html">Iniciar sesión</a>
+              <a href="panel.html">Eventos</a>
+            </div>
+            <div>
+              <h2>API</h2>
+              <a href="https://dvarc.api.apurc.online/docs" target="_blank" rel="noopener noreferrer">Documentación</a>
+              <a href="https://dvarc.api.apurc.online/api/v1/health" target="_blank" rel="noopener noreferrer">Estado</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="footer-year">2026</span> Dvarc</span>
+          <span>No afiliado a Mojang ni a Microsoft.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/api.js" defer></script>
+    <script src="assets/js/auth.js" defer></script>
+    <script src="assets/js/events.js" defer></script>
+    <script src="assets/js/download.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

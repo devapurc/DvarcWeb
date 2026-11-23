@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar sesión — Dvarc Launcher</title>
+    <meta name="description" content="Entra al panel de Dvarc con el token de tu instalación." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#0b0d10" />
+    <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page="login">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html" aria-label="Dvarc Launcher — inicio">
+          <img src="assets/img/logo.png" alt="" width="34" height="34" />
+          <span>Dvarc<small>Launcher</small></span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Abrir menú de navegación"
+        >
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Principal">
+          <a href="index.html">Inicio</a>
+          <a href="download.html">Descargar</a>
+          <a href="panel.html" class="nav-cta" data-auth="in">Mi panel</a>
+          <a href="login.html" class="nav-cta" data-auth="out">Iniciar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="auth-wrap">
+      <div class="container">
+        <div class="auth-card">
+          <img class="auth-logo" src="assets/img/logo.png" alt="" width="64" height="64" />
+          <p class="eyebrow">Acceso</p>
+          <h1>Entra con tu token</h1>
+          <p class="hero-lead">
+            El token de tu instalación es la llave: con él vemos tus cuentas, tus eventos y las
+            versiones que tienes disponibles.
+          </p>
+
+          <div class="alert alert-info" id="login-info" hidden role="status">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 11v5M12 8h.01" stroke-linecap="round" />
+            </svg>
+            <span data-alert-text></span>
+          </div>
+
+          <div class="alert alert-error" id="login-error" hidden role="alert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v6M12 16h.01" stroke-linecap="round" />
+            </svg>
+            <span data-alert-text></span>
+          </div>
+
+          <form id="login-form" novalidate>
+            <div class="field">
+              <label for="token-input">Token de la instalación</label>
+              <div class="input-row">
+                <input
+                  class="input input-mono"
+                  id="token-input"
+                  name="token"
+                  type="password"
+                  placeholder="Pega aquí tu token"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  aria-describedby="token-help"
+                  required
+                />
+                <button class="btn btn-ghost" type="button" id="paste-token">Pegar</button>
+              </div>
+              <p class="hint" id="token-help">
+                Se guarda solo en este navegador. No lo compartas con otras personas.
+              </p>
+            </div>
+
+            <label class="checkbox" for="show-token" style="margin-bottom: 1.2rem">
+              <input type="checkbox" id="show-token" />
+              Mostrar token
+            </label>
+
+            <button class="btn btn-primary" type="submit" id="login-submit" style="width: 100%">
+              Entrar al panel
+            </button>
+          </form>
+
+          <details class="assets" style="margin-top: 1.3rem">
+            <summary>¿Dónde encuentro mi token?</summary>
+            <div>
+              <p class="hint" style="padding-top: 0.3rem">
+                Abre Dvarc Launcher, ve a <strong>Ajustes → Dvarc</strong> y pulsa
+                <strong>Copiar token</strong>. Aparece la primera vez que el launcher se conecta a la
+                API; si aún no tienes el launcher,
+                <a href="download.html">descárgalo aquí</a>.
+              </p>
+            </div>
+          </details>
+
+          <div class="auth-links">
+            <a href="index.html">← Volver al inicio</a>
+            <a href="download.html">Descargar el launcher</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom" style="margin-top: 0; padding-top: 0; border-top: 0">
+          <span>© <span id="footer-year">2026</span> Dvarc</span>
+          <span>No afiliado a Mojang ni a Microsoft.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/api.js" defer></script>
+    <script src="assets/js/auth.js" defer></script>
+    <script src="assets/js/events.js" defer></script>
+    <script src="assets/js/download.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
