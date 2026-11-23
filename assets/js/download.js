@@ -222,9 +222,7 @@
     var lead = document.createElement("p");
     lead.className = "text-muted";
     lead.textContent =
-      "Instalador oficial para " +
-      OS_INFO[os].label +
-      ". Incluye el launcher y la conexión con la API de Dvarc.";
+      "Instalador oficial de Dvarc Launcher para " + OS_INFO[os].label + ".";
     left.appendChild(lead);
 
     var asset = pickAsset(release.assets, os);

@@ -196,15 +196,15 @@
         setText(
           label,
           health && typeof health.versions === "number"
-            ? "API en línea · " + health.versions + " versiones"
-            : "API en línea"
+            ? "Dvarc disponible · " + health.versions + " versiones"
+            : "Dvarc disponible"
         );
       })
       .catch(function () {
         if (dot) {
           dot.setAttribute("data-state", "down");
         }
-        setText(label, "API sin conexión");
+        setText(label, "Servicio no disponible");
       });
   }
 
@@ -382,7 +382,7 @@
       card.appendChild(head);
 
       card.appendChild(
-        element("p", null, version.description || "Versión preparada y verificada por Dvarc.")
+        element("p", null, version.description || "Versión preparada por Dvarc para jugar.")
       );
 
       var tags = element("div", "version-tags");

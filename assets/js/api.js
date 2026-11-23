@@ -13,7 +13,7 @@
 
   function messageFor(status, code) {
     if (status === 0) {
-      return "No se pudo conectar con la API. Revisa tu conexión e inténtalo de nuevo.";
+      return "No se pudo conectar con Dvarc. Revisa tu conexión e inténtalo de nuevo.";
     }
     if (status === 401) {
       return "El token no es válido o fue revocado.";
@@ -28,7 +28,7 @@
       return "Demasiadas solicitudes seguidas. Espera un momento.";
     }
     if (status >= 500) {
-      return "La API está teniendo problemas. Inténtalo más tarde.";
+      return "El servicio de Dvarc está teniendo problemas. Inténtalo más tarde.";
     }
     if (code === "missing_token") {
       return "Falta el token de la instalación.";
